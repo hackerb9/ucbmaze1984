@@ -1,5 +1,5 @@
 #ifndef lint
-static char rcsid[] = "$Header: syserr.c,v 1.1 84/08/24 02:36:47 jcoker Exp $";
+static char rcsid[] = "$Header: syserr.c,v 1.1 84/08/25 17:04:57 lai Exp $";
 #endif
 
 /*LINTLIBRARY*/

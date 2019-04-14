@@ -1,4 +1,4 @@
-/* RCS Information: $Header$ */
+/* RCS Information: $Header: corners.h,v 1.1 84/08/25 17:24:52 jcoker Exp $ */
 
 #define ENDXPOS		371
 #define ENDYPOS		280

@@ -1,0 +1,17 @@
+USER PROGRAM
+
+    The program basically talks to the daemon and gets info
+on each player as the move or change direction.  Each player
+decides if he dies, and, if so, transmits this info to the
+player who killed him.
+
+    When compiling on a non-sun, use:
+
+	make vax
+
+Otherwise, compile with
+	
+	make sun
+
+   Good luck!
+

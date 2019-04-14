@@ -1,5 +1,5 @@
 #ifndef lint
-static char rcsid[] = "$Header$";
+static char rcsid[] = "$Header: packet.c,v 1.1 84/08/25 17:11:22 chris Exp $";
 #endif
 
 #include <stdio.h>
@@ -109,6 +109,10 @@ actionpacket(p)
 				/*
 				 *  Draw an explosion and sleep for a bit
 				 *  to show the player he's been killed.
+				 *
+				 *  This will do something for both ascii
+				 *  and SUN mode, but is a little slow in
+				 *  the ascii mode.
 				 */
 				draw_my_death();
 
@@ -152,7 +156,7 @@ actionpacket(p)
 			/*
 			** The daemon has informed us that it has died.
 			*/
-			quit();
+			quit(0);
 	}
 }
 

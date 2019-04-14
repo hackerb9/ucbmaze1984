@@ -1,5 +1,5 @@
 #ifndef lint
-static char rcsid[] = "$Header$";
+static char rcsid[] = "$Header: service.c,v 1.1 84/08/25 17:11:30 chris Exp $";
 #endif
 
 #include <stdio.h>

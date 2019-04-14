@@ -1,4 +1,4 @@
-/* RCS Information: $Header$ */
+/* RCS Information: $Header: sunscreen.h,v 1.1 84/08/25 17:25:00 jcoker Exp $ */
 
 #include <pixrect/pixrect_hs.h>
 

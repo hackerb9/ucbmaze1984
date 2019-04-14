@@ -1,4 +1,4 @@
-/* RCS Information: $Header$ */
+/* RCS Information: $Header: extern.h,v 1.1 84/08/25 17:24:55 chris Exp $ */
 
 extern char maze[MAZEWIDTH][MAZELENGTH];
 

@@ -1,5 +1,5 @@
 #ifndef lint
-static char rcsid[] = "$Header$";
+static char rcsid[] = "$Header: main.c,v 1.1 84/08/25 17:11:21 chris Exp $";
 #endif
 
 #include <stdio.h>
@@ -151,9 +151,5 @@ initsigs()
 
 	/* Interrupt character flushes type-ahead */
 	(void) signal(SIGINT, takill);
-#ifdef notdef
 	(void) signal(SIGQUIT, quit);
-#else
-	(void) signal(SIGQUIT, SIG_DFL);
-#endif
 }

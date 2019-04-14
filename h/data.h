@@ -1,4 +1,4 @@
-/* RCS Information: $Header$ */
+/* RCS Information: $Header: data.h,v 1.1 84/08/25 17:24:53 chris Exp $ */
 
 char maze[MAZEWIDTH][MAZELENGTH] = {
     {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},

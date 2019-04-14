@@ -1,4 +1,4 @@
-/* RCS Information: $Header$ */
+/* RCS Information: $Header: struct.h,v 1.1 84/08/25 17:24:58 lai Exp $ */
 
 struct state {
 	int	s_flag;

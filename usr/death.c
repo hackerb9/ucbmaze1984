@@ -1,5 +1,5 @@
 #ifndef lint
-static char rcsid[] = "$Header$";
+static char rcsid[] = "$Header: death.c,v 1.1 84/09/03 00:47:58 lai Exp $";
 #endif
 
 #include <curses.h>
@@ -11,6 +11,12 @@ static char rcsid[] = "$Header$";
 #ifdef sun
 # include "../h/sunscreen.h"
 #endif
+
+
+/*
+ *  The player died, draw something on the screen
+ *  to show the death.
+ */
 
 draw_my_death()
 {
@@ -29,11 +35,8 @@ ascii_death()
 {
 	extern WINDOW	*w_birdv;
 
-#define RADIUS		10
-	wclear(w_birdv);
+#define RADIUS		8
 	ascii_explosion(w_birdv, me->u_y, me->u_x * 2, RADIUS, '*');
-
-	sleep(2);
 
 	draw_maze();
 	touchwin(w_birdv);
@@ -76,11 +79,8 @@ ascii_explosion(w, r, c, maxr, ch)
 	}
 }
 
-#ifdef sun
 
-#include "expl.h"
-#define BLOCK		8
-#define UNDRAW		200
+#ifdef sun
 
 extern struct pixrect	*px_viewwin;
 
@@ -91,30 +91,20 @@ extern struct pixrect	*px_viewwin;
 static
 sun_death()
 {
-	register	bx, by;
-	register	d, u;
+	register int	density, x, y;
 
-	bx = VIEWX + VIEWW / 2;
-	by = VIEWY + VIEWH / 2;
-	for (d = 0; d < MAXIMAGES; d++) {
-		rect(px_screen, bx + xlist[d], by + ylist[d], 
-		    BLOCK, BLOCK, OP_CLEAR);
-		(void) cos((double) 0);	/* waste some time */
-		if ( (u = d - UNDRAW) >= 0)
-			rect(px_screen, bx + xlist[u], by + ylist[u], BLOCK,
-			    BLOCK, OP_SET);
-	}
+#define DENSITY	15
 
-	for ( u++; u < MAXIMAGES; u++) {
-		rect(px_screen, bx + xlist[u], by + ylist[u], 
-		    BLOCK, BLOCK, OP_SET);
-		(void) cos((double) 0);	/* waste some time */
+	for (density = DENSITY; density > (DENSITY / 2); density -= 2) {
+		for (x = 0; x < VIEWW; x += density)
+			rect(px_viewwin, x, 0, 2, VIEWH, OP_SET);
+		copyat(px_viewwin, VIEWX, VIEWY, OP_WRITE);
 	}
 	prclear(px_viewwin);
 	copyat(px_viewwin, VIEWX, VIEWY, OP_WRITE);
 
-	sleep(2);
+	sleep(1);
 
-	screen_redraw();
+	/* let the newposition redraw the view */
 }
 #endif sun

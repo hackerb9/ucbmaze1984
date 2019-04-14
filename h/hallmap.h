@@ -1,4 +1,4 @@
-/* RCS Information: $Header$ */
+/* RCS Information: $Header: hallmap.h,v 1.1 84/08/25 17:24:57 jcoker Exp $ */
 
 #define H_EMPTY		0x00000
 #define H_LEFTP		0x01000

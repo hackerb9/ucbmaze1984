@@ -1,4 +1,4 @@
-/* RCS Information: $Header$ */
+/* RCS Information: $Header: wall_image.h,v 1.1 84/08/25 17:25:02 jcoker Exp $ */
 
 #ifdef sun
 static short	wall_data[16] = {

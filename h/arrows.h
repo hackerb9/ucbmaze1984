@@ -1,4 +1,4 @@
-/* RCS Information: $Header$ */
+/* RCS Information: $Header: arrows.h,v 1.1 84/08/25 17:24:50 chris Exp $ */
 
 #ifdef sun
 short	down_arrow[10] = {

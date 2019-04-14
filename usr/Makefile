@@ -26,11 +26,35 @@ CFLAGS =	-O
 vax:		$(OFILES)
 		$(CC) $(CFLAGS) $(OFILES) $(LIBS) -o mazewar
 
+vax.ingres:	$(OFILES)
+		$(CC) $(CFLAGS) $(OFILES) $(LIBS) libc.ingres -o mazewar.ingres
+
+vax.ic:		$(OFILES)
+		$(CC) $(CFLAGS) $(OFILES) $(LIBS) libc.ic -o mazewar.ic
+
 sun:		$(OFILES) $(SUNFILES)
 		$(CC) $(CFLAGS) $(OFILES) $(SUNFILES) $(SUNLIBS)  -o mazewar
 
 prmaze:		prmaze.o
 		$(CC) $(CFLAGS) prmaze.o -o prmaze
+
+dist:
+		rcp mazewar ucbarpa.chris:bin/mazewar
+		rcp mazewar ucbcad.chris:bin/mazewar
+		rcp mazewar ucbcory.chris:bin/mazewar
+#		rcp mazewar ucbdali.chris:bin/mazewar
+		rcp mazewar ucbernie.chris:bin/mazewar
+		rcp mazewar ucbesvax.chris:bin/mazewar
+		rcp mazewar.ic ucbic.chris:bin/mazewar
+		rcp mazewar.ingres ucbingres.chris:bin/mazewar
+#		rcp mazewar ucbmatisse.chris:bin/mazewar
+		rcp mazewar.ic ucbmedea.chris:bin/mazewar
+		rcp mazewar.ic ucbmerlin.chris:bin/mazewar
+		rcp mazewar ucbmiro.chris:bin/mazewar
+		rcp mazewar ucbmonet.chris:bin/mazewar
+		rcp mazewar.ic ucboz.chris:bin/mazewar
+		rcp mazewar ucbshadow.chris:bin/mazewar
+		rcp mazewar ucbvax.chris:bin/mazewar
 
 ctags:
 		ctags $(CFILES) $(HFILES)

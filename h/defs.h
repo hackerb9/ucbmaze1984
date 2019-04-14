@@ -1,4 +1,4 @@
-/* RCS Information: $Header$ */
+/* RCS Information: $Header: defs.h,v 1.1 84/08/25 17:24:54 lai Exp $ */
 
 #define MAZEWIDTH 32
 #define MAXDEPTH 30

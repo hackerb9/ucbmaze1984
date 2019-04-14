@@ -1,5 +1,5 @@
 #ifndef lint
-static char rcsid[] = "$Header: getsocket.c,v 1.1 84/08/24 02:36:42 jcoker Exp $";
+static char rcsid[] = "$Header: getsocket.c,v 1.1 84/08/25 17:04:51 lai Exp $";
 #endif
 
 #include <sys/types.h>
