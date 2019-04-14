@@ -1,0 +1,9 @@
+cc -O -c init.c
+cc -O -c join.c
+cc -O -c main.c
+cc -O -c send.c
+cc -O -c ualarm.c
+cc -O -c work.c
+newvers vers.c
+cc -O -c vers.c
+cc -O curtime.o getsocket.o init.o join.o main.o send.o service.o  syserr.o ualarm.o verify.o work.o vers.o -o mazed

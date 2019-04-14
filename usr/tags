@@ -1,0 +1,84 @@
+ABS	init.c	/^#define ABS(a)		((a) < 0 ? -(a) : (a))$/
+CTRL	actions.c	/^#define CTRL(c)		('c' & 037)$/
+MASK	calldaemon.c	/^#define MASK(sig)		(1 << ((sig) - 1))$/
+Mmain	main.c	/^main(argc, argv)$/
+Mprmaze	prmaze.c	/^main()$/
+SIGHOLD	calldaemon.c	/^#define SIGHOLD(signo) 		(sigblock(MASK(signo)))$/
+SIGRELSE	calldaemon.c	/^#define SIGRELSE(signo) 	(sigsetmask(sigblock(0) &/
+SQUARE	circle.c	/^#define SQUARE(x)	((x) * (x))$/
+action_180turn	service.c	/^action_180turn(input)$/
+action_back_up	service.c	/^action_back_up(input)$/
+action_beep	service.c	/^action_beep()$/
+action_forward	service.c	/^action_forward(input)$/
+action_left	service.c	/^action_left(input)$/
+action_left_peek	service.c	/^action_left_peek(input)$/
+action_quit	service.c	/^action_quit(input)$/
+action_redraw	service.c	/^action_redraw(input)$/
+action_right	service.c	/^action_right(input)$/
+action_right_peek	service.c	/^action_right_peek(input)$/
+action_shoot	service.c	/^action_shoot(input)$/
+action_stop_peek	service.c	/^action_stop_peek(input)$/
+actionpacket	packet.c	/^actionpacket(p)$/
+addplayer	../h/defs.h	/^#define addplayer(P,X,Y)	(bitmaze[inmaze(X,Y)] |= /
+back	comm.c	/^back()$/
+bit	calldaemon.c	/^#define bit(i)			(1 << (i))$/
+bturn	comm.c	/^bturn()$/
+calldaemon	calldaemon.c	/^calldaemon(player, host)$/
+circle	circle.c	/^circle(pr, xcen, ycen, radius)$/
+copyat	../h/sunscreen.h	/^#define copyat(pr,x,y,op)	pr_rop(px_screen, (x), (/
+debugs	init.c	/^debugs(string)$/
+delplayer	../h/defs.h	/^#define delplayer(P,X,Y)	(bitmaze[inmaze(X,Y)] &= /
+draw_hall	init.c	/^draw_hall(dir, mex, mey)$/
+draw_maze	init.c	/^draw_maze()$/
+draw_nearest	init.c	/^draw_nearest()$/
+draw_other_player	player.c	/^draw_other_player(x, y, size, dir)$/
+draw_others	init.c	/^draw_others()$/
+draw_player	init.c	/^draw_player(x, y, dir)$/
+draw_rats	init.c	/^draw_rats()$/
+draw_status	init.c	/^draw_status(i)$/
+draw_view	viewwin.c	/^draw_view(view, dist, dir)$/
+endpix	initpix.c	/^endpix()$/
+fire	comm.c	/^fire()$/
+forward	comm.c	/^forward()$/
+getsocket	getsocket.c	/^getsocket()$/
+init_screen	init.c	/^init_screen()$/
+initearsin	calldaemon.c	/^initearsin(host, port)$/
+initpix	initpix.c	/^initpix()$/
+initplayer	initplayer.c	/^initplayer(player)$/
+initposition	initplayer.c	/^initposition(player)$/
+initsigs	main.c	/^initsigs()$/
+inmaze	../h/defs.h	/^#define inmaze(A,B)		((((A) << 4) | (B)) & 0x1ff)$/
+input_action	actions.c	/^int (*input_action(ch))()$/
+line	../h/sunscreen.h	/^#define line(pr,x1,y1,x2,y2,op)	pr_vector((pr), (x/
+linebox	redraw.c	/^linebox(x, y, w, h)$/
+lturn	comm.c	/^lturn()$/
+mvaddch	wintext.c	/^mvaddch(pr, x, y, c)$/
+mvaddstr	wintext.c	/^mvaddstr(pr, x, y, s)$/
+mvprintf	wintext.c	/^mvprintf(pr, x, y, format, args)$/
+nearest	init.c	/^nearest(medir, mex, mey)$/
+parse_action_string	actions.c	/^parse_action_string(string)$/
+point	../h/sunscreen.h	/^#define point(pr,x,y)		pr_put((pr), (x), (y), 1)$/
+prclear	../h/sunscreen.h	/^#define prclear(pr)		pr_rop((pr), 0, 0, (pr)->pr_w/
+prcopyat	../h/sunscreen.h	/^#define prcopyat(pr1,pr,x,y,op)	pr_rop((pr1), (x),/
+quit	service.c	/^quit(status)$/
+read_packet	packet.c	/^read_packet(fd)$/
+rect	../h/sunscreen.h	/^#define rect(pr,x,y,w,h,op)	pr_rop((pr), (x), (y),/
+relative_dir	init.c	/^relative_dir(me, him)$/
+rturn	comm.c	/^rturn()$/
+screen_redraw	redraw.c	/^screen_redraw()$/
+sendaction	send.c	/^sendaction(flag, slot, from)$/
+sendquit	send.c	/^sendquit()$/
+sendstat	send.c	/^sendstat(flags)$/
+service	service.c	/^service()$/
+set_action	actions.c	/^set_action(string, action)$/
+set_default_actions	actions.c	/^set_default_actions()$/
+setioctls	ioctls.c	/^setioctls()$/
+setkeyok	setkeyok.c	/^setkeyok()$/
+srefresh	init.c	/^srefresh()$/
+statepacket	packet.c	/^statepacket(p)$/
+sun_init_screen	initpix.c	/^sun_init_screen()$/
+takill	ioctls.c	/^takill()$/
+ualarm	ualarm.c	/^ualarm(usecs, reload)$/
+unsetioctls	ioctls.c	/^unsetioctls()$/
+userpacket	packet.c	/^userpacket(p)$/
+work	work.c	/^work()$/

@@ -1,0 +1,30 @@
+MASK	work.c	/^#define MASK(sig)		(1 << ((sig) - 1))$/
+Mmain	main.c	/^main(argc, argv)$/
+SIGHOLD	work.c	/^#define SIGHOLD(signo)		(sigblock(MASK(signo)))$/
+SIGRELSE	work.c	/^#define SIGRELSE(signo)		(sigsetmask(sigblock(0) &/
+action	service.c	/^action(p)$/
+background	init.c	/^background()$/
+bit	work.c	/^#define bit(i)	(1 << (i))$/
+closefds	init.c	/^closefds()$/
+curtime	curtime.c	/^curtime()$/
+gethname	verify.c	/^gethname(hostaddr)$/
+getsocket	getsocket.c	/^getsocket(port)$/
+ghostbuster	ualarm.c	/^ghostbuster()$/
+init	init.c	/^init(argc, argv)$/
+initfds	init.c	/^initfds()$/
+initsigs	init.c	/^initsigs()$/
+initstructs	init.c	/^initstructs()$/
+join	join.c	/^join(p, from, fromlen)$/
+login	init.c	/^login(program)$/
+nice_exit	work.c	/^nice_exit()$/
+send_action	send.c	/^send_action(a)$/
+send_all	send.c	/^send_all(slot)$/
+send_state	send.c	/^send_state(slot)$/
+send_user	send.c	/^send_user(slot)$/
+state	service.c	/^state(p)$/
+syserr	syserr.c	/^syserr(format, va_alist)$/
+syslog	syserr.c	/^syslog(format, va_alist)$/
+ualarm	ualarm.c	/^ualarm(usecs, reload)$/
+verify	verify.c	/^verify(addr)$/
+voidtty	init.c	/^voidtty()$/
+work	work.c	/^work()$/
